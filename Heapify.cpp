@@ -17,25 +17,13 @@ public:
                     cur = cur * 2 + 1;
                 }
                 else{//both left and right exist
-                    if(A[cur * 2 + 1] < A[cur] && A[cur * 2 + 2] < A[cur]){
-                        if(A[cur * 2 + 1] < A[cur * 2 + 2]){
-                            swap(A[cur], A[cur * 2 + 1]);
-                            cur = cur * 2 + 1;
-                        }
-                        else{
-                            swap(A[cur], A[cur * 2 + 2]);
-                            cur = cur * 2 + 2;
-                        }
+                    if(A[cur * 2 + 1] < A[cur * 2 + 2]){
+                        swap(A[cur], A[cur * 2 + 1]);
+                        cur = cur * 2 + 1;
                     }
                     else{
-                        if(A[cur * 2 + 1] < A[cur]){
-                            swap(A[cur], A[cur * 2 + 1]);
-                            cur = cur * 2 + 1;
-                        }
-                        else{
-                            swap(A[cur], A[cur * 2 + 2]);
-                            cur = cur * 2 + 2;
-                        }
+                        swap(A[cur], A[cur * 2 + 2]);
+                        cur = cur * 2 + 2;
                     }
                 }
             }
